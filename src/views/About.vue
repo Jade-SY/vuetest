@@ -2,15 +2,15 @@
   <div class="about">
     <h1>This is an about page</h1>
     <div class="mainbox">
-      <p
-        class="maintxt"
-        @:mouseover="fadeout"
-      >Lorem ipsum dolor sit, amet consectetur adipisicing elit.Tenetur minus tempora animi. Suscipit earum laboriosam, doloribus commodi at quidem perferendis, totam maxime magni optio nesciunt dolorum corporis rem ipsam itaque!</p>
+      <p class="maintxt" @:mouseover="fadeout">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.Tenetur minus
+        tempora animi. Suscipit earum laboriosam, doloribus commodi at quidem
+        perferendis, totam maxime magni optio nesciunt dolorum corporis rem
+        ipsam itaque!
+      </p>
     </div>
   </div>
 </template>
-
-
 
 <style lang="scss" scoped>
 .about {

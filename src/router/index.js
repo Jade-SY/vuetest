@@ -5,7 +5,8 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
-const routes = [{
+const routes = [
+  {
     path: "/",
     name: "Home",
     component: Home
@@ -22,31 +23,27 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
     path: "/play",
     name: "play",
-    component: () =>
-      import("../views/playground.vue")
+    component: () => import("../views/playground.vue")
   },
   {
     path: "/for",
     name: "Forif",
-    component: () =>
-      import("../views/ForIf.vue")
+    component: () => import("../views/ForIf.vue")
   },
   {
     path: "/list",
     name: "List",
-    component: () =>
-      import("../views/list.vue")
+    component: () => import("../views/list.vue")
   },
   {
     path: "/event",
     name: "Event",
-    component: () =>
-      import("../views/Event.vue")
+    component: () => import("../views/Event.vue")
   }
 ];
 

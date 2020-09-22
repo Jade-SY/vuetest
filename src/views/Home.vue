@@ -1,11 +1,12 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <h1>{{msg}}</h1>
+    <h1>{{ msg }}</h1>
     <div id="app-2">
       <p v-bind:title="upload">
         내 위에 잠시 마우스를 올리면
-        <span style="color: red">동적</span>으로 바인딩 된 title을 볼 수 있습니다!
+        <span style="color: red">동적</span>으로 바인딩 된 title을 볼 수
+        있습니다!
       </p>
       <p v-if="seen">이제 나를 볼 수 있어요</p>
       <ol>
@@ -17,7 +18,7 @@
       이를 막기위해 v-bind:key를 사용한다.
       v-for와v-bind:key는 반드시 세트로 묶어서 사용-->
       <!-- v-bind:key="i"에서 i는 index -->
-      <p>{{message}}</p>
+      <p>{{ message }}</p>
       <input v-model="message" />
       <!-- v-model:실시간으로 반영하여 값을 수정.message의 초기값은 "안녕하세요! Vue.js!"이지만
       실제 웹페이지에서 입력하는대로 바뀌게 된다.-->
