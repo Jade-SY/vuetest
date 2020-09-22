@@ -25,6 +25,8 @@
       <!-- components에 입력한 문서명을 태그로 사용하여 임포트 -->
       <HelloWorld></HelloWorld>
       <About></About>
+      <Event :pageH1="eventH1"></Event>
+      <Event :pageH1="'이건 H2'"></Event>
       <!-- components에 입력한 문서명을 태그로 사용하여 임포트 -->
     </div>
   </div>
@@ -33,10 +35,11 @@
 <script>
 import HelloWorld from "@/components/HelloWorld.vue";
 import About from "@/views/About.vue";
+import Event from "@/views/Event.vue";
 // 불러올 문서를 import
 export default {
   name: "Home",
-  components: { HelloWorld, About }, //불러올 문서명 입력. 콤마로 구분하여 여러 문서를 불러올 수 있다.
+  components: { HelloWorld, About, Event }, //불러올 문서명 입력. 콤마로 구분하여 여러 문서를 불러올 수 있다.
   data() {
     return {
       msg: "안녕하세요",
@@ -47,7 +50,8 @@ export default {
         { text: "JavaScript 배우기" },
         { text: "Vue 배우기" },
         { text: "무언가 멋진 것을 만들기" }
-      ]
+      ],
+      eventH1: "이건 event"
     };
   },
   methods: {
