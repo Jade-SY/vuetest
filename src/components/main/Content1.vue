@@ -1,11 +1,30 @@
 <template>
   <section class="content1">
-    <!-- <v-img :src"require('../../assets/visual.jpg')" min-height="calc(100vh - 100px)"></v-img> -->
-    <p class="tit-first">{{mainCopy1}}</p>
-    <p class="tit-second">{{mainCopy2}}</p>
-    <v-btn class="down-vtn">
-      <span></span>
-    </v-btn>
+    <v-row no-gutters>
+      <v-img :min-height="'calc(100vh - 100px)'" src="../../assets/visual.jpg">
+        <v-container fill-height>
+          <v-row align="center" class="white--text mx-auto" justify="center">
+            <v-col class="text-center" cols="12">
+              <span class="font-weight-light">WELCOME TO</span>
+              <br />
+              <span class="font-weight-bold">VUETIFY</span>
+            </v-col>
+            <v-btn
+              class="align-self-end"
+              color="white"
+              fab
+              outlined
+              @click="$vuetify.goTo('.about-me')"
+            >
+              <v-icon>mdi-chevron-double-down</v-icon>
+            </v-btn>
+            <!-- <v-btn class="align-self-end" fab outlined @click="$vuetify.goTo('#about-me')">
+              <v-icon>mdi-chevron-double-down</v-icon>
+            </v-btn>-->
+          </v-row>
+        </v-container>
+      </v-img>
+    </v-row>
   </section>
 </template>
 
@@ -14,47 +33,29 @@ export default {
   name: "content1",
   components: {},
   data() {
-    return {
-      mainCopy1: "welcome to",
-      mainCopy2: "vuetify"
-    };
+    return {};
   },
   methods: {}
 };
 </script>
 <style lang="scss" scoped>
-.content1 {
-  width: 100%;
-  min-height: calc(100vh - 100px);
-  background: url("../../assets/visual.jpg") no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.text-center {
+  line-height: 3.5rem;
 }
-p {
-  color: #fff;
-  line-height: 0.8em;
-  text-transform: uppercase;
-}
-.tit-first {
-  font-size: 3em;
+.font-weight-light {
+  font-size: 3rem;
   font-weight: 300;
 }
-.tit-second {
-  font-size: 6em;
+.font-weight-bold {
+  font-size: 6rem;
   font-weight: 900;
 }
-.down-vtn {
-}
-.v-btn:not(.v-btn--round).v-size--default {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-}
-.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
-  background-color: rgba(255, 255, 255, 0.274);
-}
+// .down-vtn {
+// }
+// .v-btn:not(.v-btn--round).v-size--default {
+//   width: 64px;
+//   height: 64px;
+//   border-radius: 50%;
+//   border: 1px solid #fff;
+// }
 </style>

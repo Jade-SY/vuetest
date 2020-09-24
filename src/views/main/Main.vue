@@ -1,7 +1,10 @@
 <template>
   <div class="main">
-    <Content1></Content1>
-    <AboutMe></AboutMe>
+    <content1></content1>
+    <about-me></about-me>
+    <VF></VF>
+    <Parallax></Parallax>
+    <!-- <blog></blog> -->
   </div>
 </template>
 
@@ -10,7 +13,10 @@ export default {
   name: "Main",
   components: {
     Content1: () => import("@/components/main/Content1.vue"),
-    AboutMe: () => import("@/components/main/AboutMe.vue")
+    AboutMe: () => import("@/components/main/AboutMe.vue"),
+    VF: () => import("@/components/main/VeutifyFeatures.vue"),
+    Parallax: () => import("@/components/main/Parallax.vue")
+    // blog: () => import("@/components/main/Blog.vue")
   },
   data() {
     return {};
