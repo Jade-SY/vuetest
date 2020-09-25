@@ -18,7 +18,7 @@ export default {
     VF: () => import("@/components/main/Features.vue"),
     Parallax: () => import("@/components/main/Parallax.vue"),
     blog: () => import("@/components/main/Blog.vue"),
-    VuexEx: () => import("@/components/main/VuexEx.vue")
+    VuexEx: () => import("@/components/main/VuexEX.vue")
   },
   data() {
     return {};

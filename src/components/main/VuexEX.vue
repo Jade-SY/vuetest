@@ -15,18 +15,19 @@
 </template>
 
 <script>
-// import { mapState } from "vuex";
+import { mapState } from "vuex";
 export default {
-  // computed: { ...mapState(["files"]) },
-  // method: {
-  //   addFile() {
-  //     //click이벤트
-  //     this.$store.commit("addFile", {
-  //       title: "firstFile",
-  //       subtitle: "this file is good"
-  //     });
-  //   }
-  // }
+  computed: { ...mapState(["files"]) },
+  methods: {
+    addFile() {
+      //click이벤트
+      this.$store.commit("addFile", {
+        title: "Hello",
+        subtitle: "this file is good file"
+      });
+      this.$store.delete("addFile");
+    }
+  }
 };
 </script>
 
