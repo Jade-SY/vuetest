@@ -28,7 +28,7 @@ export default new Vuex.Store({
         }]
     },
     mutations: {
-
+        // state안의 데이터를 편집하기 위해서 mutations안에 함수가 필요함
         addBlog(state, payload) {
             state.blogs.push(payload);
         },
