@@ -22,7 +22,7 @@ export default {
 }
 .line {
   width: 60px;
-  margin: 2px auto;
+  margin: 4px auto;
 }
 p {
   font-size: 1.25rem;

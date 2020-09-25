@@ -4,7 +4,8 @@
     <about-me></about-me>
     <VF></VF>
     <Parallax></Parallax>
-    <!-- <blog></blog> -->
+    <blog></blog>
+    <VuexEx></VuexEx>
   </div>
 </template>
 
@@ -14,9 +15,10 @@ export default {
   components: {
     Content1: () => import("@/components/main/Content1.vue"),
     AboutMe: () => import("@/components/main/AboutMe.vue"),
-    VF: () => import("@/components/main/VeutifyFeatures.vue"),
-    Parallax: () => import("@/components/main/Parallax.vue")
-    // blog: () => import("@/components/main/Blog.vue")
+    VF: () => import("@/components/main/Features.vue"),
+    Parallax: () => import("@/components/main/Parallax.vue"),
+    blog: () => import("@/components/main/Blog.vue"),
+    VuexEx: () => import("@/components/main/VuexEx.vue")
   },
   data() {
     return {};

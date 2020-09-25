@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+parallax-theme-v.1.0.0
 /dist
 /src/assets
 /tests/e2e/videos/
