@@ -68,7 +68,7 @@ export default {
     // document.addEventListener("resize", onresize);도 위와 동일하다.
     //"resize"는 이미 지정된 값. "click"이라고 할 경우 화면을 클릭했을때 실행되는식
     //addEventListener(이벤트핸들러)는 연속적인 동작이므로 연산량 과다를 막기위해
-    // 한 페이지에 표시되는 문서당 2~3개가 적당.
+    //한 페이지에 표시되는 문서당 2~3개가 적당.
   },
   methods: {}
 };

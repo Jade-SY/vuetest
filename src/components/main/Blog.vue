@@ -1,6 +1,6 @@
 <template>
   <div class="blog-view">
-    <h2 class="con-tit">{{ "blog".toUpperCase() }}</h2>
+    <h2 class="con-tit">{{ 'blog'.toUpperCase() }}</h2>
     <v-divider class="line"></v-divider>
     <v-divider class="line"></v-divider>
     <!-- <div class="blog-item-wrap">
@@ -51,12 +51,12 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 // 뷰엑스 사용을 위한 임포트
 export default {
-  name: "blog",
+  name: 'blog',
   components: {
-    blogItem: () => import("@/components/main/BlogItem.vue")
+    blogItem: () => import('@/components/main/BlogItem.vue'),
   },
   data() {
     return {
@@ -85,18 +85,18 @@ export default {
       // ]
     };
   },
-  computed: { ...mapState(["blogs", "etc"]) },
+  computed: { ...mapState(['blogs', 'etc']) },
   methods: {
     addBlogItem() {
       //click
-      this.$store.commit("addBlog", {
-        title: "shiba",
+      this.$store.commit('addBlog', {
+        title: 'shiba',
         url:
-          "https://pbs.twimg.com/profile_images/538716586576592896/DKIQ0dPL_400x400.jpeg",
-        text: "shiba입니다."
+          'https://pbs.twimg.com/profile_images/538716586576592896/DKIQ0dPL_400x400.jpeg',
+        text: 'shiba입니다.',
       });
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

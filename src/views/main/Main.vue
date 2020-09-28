@@ -11,20 +11,19 @@
 
 <script>
 export default {
-  name: "Main",
+  name: 'Main',
   components: {
-    Content1: () => import("@/components/main/Content1.vue"),
-    AboutMe: () => import("@/components/main/AboutMe.vue"),
-    VF: () => import("@/components/main/Features.vue"),
-    Parallax: () => import("@/components/main/Parallax.vue"),
-    blog: () => import("@/components/main/Blog.vue"),
-    contact: () => import("@/components/main/Contact.vue")
+    Content1: () => import('@/components/main/Content1.vue'),
+    AboutMe: () => import('@/components/main/AboutMe.vue'),
+    VF: () => import('@/components/main/Features.vue'),
+    Parallax: () => import('@/components/main/Parallax.vue'),
+    blog: () => import('@/components/main/Blog.vue'),
+    contact: () => import('@/components/main/Contact.vue'),
   },
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
