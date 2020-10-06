@@ -10,10 +10,16 @@ const routes = [{
     name: "Home",
     component: Home,
     children: [{ // 칠드런은 네임 생략가능
-      path: "/",
-      component: () =>
-        import('../views/main/Main.vue')
-    }]
+        path: "/",
+        component: () =>
+          import('../views/main/Main.vue')
+      },
+      {
+        path: "/gallery",
+        component: () =>
+          import('../views/Gallery.vue')
+      }
+    ]
   },
 
 ];
