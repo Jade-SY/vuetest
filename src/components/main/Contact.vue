@@ -1,6 +1,6 @@
 <template>
   <div class="contact-me">
-    <h2 class="con-tit">{{ 'contact me'.toUpperCase() }}</h2>
+    <h2 class="con-tit">{{ "contact me".toUpperCase() }}</h2>
     <v-divider color="gray" class="line"></v-divider>
     <v-divider color="gray" class="line"></v-divider>
     <!-- <v-input>
@@ -55,9 +55,9 @@
       <div v-for="(employee, i) in body.data" :key="i">
         <div>
           {{
-            'name : ' +
+            "name : " +
               employee.employee_name +
-              ' age : ' +
+              " age : " +
               employee.employee_age
           }}
         </div>
@@ -67,19 +67,19 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import sendGrid from '@/config/sendGrid.json';
+import { mapState } from "vuex";
+import sendGrid from "@/config/sendGrid.json";
 export default {
   data() {
     return {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
     };
   },
   beforeMount() {},
-  computed: { ...mapState(['body']) },
+  computed: { ...mapState(["body"]) },
   methods: {
     httpGetExample() {
       // this.$http
@@ -119,44 +119,47 @@ export default {
           {
             to: [
               {
-                email: 'kkamang611@naver.com',
-              },
+                email: "kkamang611@naver.com"
+              }
             ],
-            subject: this.subject,
-          },
+            subject: this.subject
+          }
         ],
         from: {
-          email: this.email,
+          email: this.email
         },
         content: [
           {
-            type: 'text/plain',
-            value: '안녕하세요. 저는 ' + this.name + '입니다. ' + this.message,
-          },
-        ],
+            type: "text/plain",
+            value: "안녕하세요. 저는 " + this.name + "입니다. " + this.message
+          }
+        ]
       };
 
       this.$http
-        .post('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', body, {
+        .post("https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send", body, {
           headers: {
-            'content-type': 'application/json',
-            'x-rapidapi-host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
-            'x-rapidapi-key': sendGrid.key,
-            accept: 'application/json',
-            useQueryString: true,
-          },
+            "content-type": "application/json",
+            "x-rapidapi-host": "rapidprod-sendgrid-v1.p.rapidapi.com",
+            "x-rapidapi-key": sendGrid.key,
+            accept: "application/json",
+            useQueryString: true
+          }
         })
         // get은 url에서 끝나지만 post는 url, 뒤에 데이터를 넣을 수 있는 공간이있다
         // 여기서는 body가 데이터에 해당
+        // .post(방식), body(데이터), headers(config(설정))
         .then(function(response) {
           console.log(response);
         })
         .catch(function(error) {
           console.log(error);
         });
-    },
-  },
+    }
+  }
 };
+
+
 </script>
 
 <style lang="scss" scoped>
