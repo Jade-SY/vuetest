@@ -3,8 +3,7 @@
     <v-footer class="font-weight-medium">
       <v-col class="text-center" cols="12">
         <p>
-          © 2020 —
-          Vuetify, Made by SoYeon Park
+          © 2020 — Vuetify, Made by SoYeon Park
         </p>
       </v-col>
     </v-footer>
@@ -13,23 +12,17 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
   components: {},
   data() {
     return {
-      fixed: true
+      fixed: true,
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
-// .font-weight-medium {
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-// }
 p {
   font-weight: normal;
   font-size: 14px;

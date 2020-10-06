@@ -17,17 +17,53 @@
           habitant morbi tristique senectus et netus.
         </p>
       </transition>
+      <div id="list-demo">
+        <v-btn @click="add">Add</v-btn>
+        <v-btn v-on:click="remove">Remove</v-btn>
+        <transition-group name="list" tag="p">
+          <span v-for="item in items" :key="item" class="list-item">
+            {{ item }}
+          </span>
+        </transition-group>
+      </div>
+      <div id="flip-list-demo" class="demo">
+        <v-btn v-on:click="shuffle">Shuffle</v-btn>
+        <transition-group name="flip-list" tag="ul">
+          <li v-for="el in values" v-bind:key="el">
+            {{ el }}
+          </li>
+        </transition-group>
+      </div>
     </div>
+    <!-- demo end -->
   </div>
 </template>
 
 <script>
+import _ from 'lodash';
 export default {
   name: 'Gallery',
   data() {
     return {
       show: true,
+      items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11],
+      nextNum: 10,
     };
+  },
+  methods: {
+    randomIndex: function() {
+      return Math.floor(Math.random() * this.items.length);
+    },
+    add: function() {
+      this.items.splice(this.randomIndex(), 0, this.nextNum++);
+    },
+    remove: function() {
+      this.items.splice(this.randomIndex(), 1);
+    },
+    shuffle: function() {
+      this.values = _.shuffle(this.values);
+    },
   },
 };
 </script>
@@ -72,5 +108,24 @@ export default {
   100% {
     transform: scale(1);
   }
+}
+#list-demo {
+  margin-top: 40px;
+}
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.flip-list-move {
+  transition: transform 1s;
 }
 </style>

@@ -7,13 +7,12 @@
 <script>
 // 불러올 문서를 import
 export default {
-  name: "View",
+  name: 'View',
   components: {},
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

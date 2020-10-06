@@ -6,7 +6,7 @@
         <!-- 자바스크립트에서 파일을 불러오는 코드 require 직접 src에 경로를 입력하면
         웹에서 제대로 적용이 안될 수도 있으므로 자바스크립트를 사용한다-->
       </v-avatar>
-      <v-toolbar-title>VUETIFY</v-toolbar-title>
+      <v-toolbar-title>Practice</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn class="login">login</v-btn>
     </v-app-bar>
@@ -15,12 +15,12 @@
 
 <script>
 export default {
-  name: "AppBar",
+  name: 'AppBar',
   components: {},
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
