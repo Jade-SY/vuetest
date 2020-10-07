@@ -198,7 +198,8 @@ export default new Vuex.Store({
                 }
             ],
             "message": "Successfully! All records has been fetched."
-        }
+        },
+        images: [],
 
     },
     mutations: {
@@ -208,6 +209,10 @@ export default new Vuex.Store({
         },
         addFile(state, payload) {
             state.files.push(payload);
+        },
+        //state안의 images에 payload 내용을 그대로 가져다 쓰기 때문에 push없이 = 사용
+        setImages(state, payload) {
+            state.images = payload
         }
     },
     actions: {},
