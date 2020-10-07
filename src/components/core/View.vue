@@ -1,18 +1,29 @@
 <template>
   <div>
-    <router-view></router-view>
+    <transition name="component-fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
 // 불러올 문서를 import
 export default {
-  name: 'View',
+  name: "View",
   components: {},
   data() {
     return {};
   },
-  methods: {},
+  methods: {}
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -36,19 +36,27 @@
       </div>
     </div>
     <!-- demo end -->
+    <transition name="slide-fade" mode="in-out">
+      <v-btn v-if="isEditing" key="save" @click="isEditing = !isEditing">
+        Save
+      </v-btn>
+      <v-btn v-else key="edit" @click="isEditing = !isEditing">
+        Edit
+      </v-btn>
+    </transition>
   </div>
 </template>
 
 <script>
-import _ from 'lodash';
+import _ from "lodash";
 export default {
-  name: 'Gallery',
+  name: "Gallery",
   data() {
     return {
       show: true,
       items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11],
-      nextNum: 10,
+      nextNum: 10
     };
   },
   methods: {
@@ -63,8 +71,8 @@ export default {
     },
     shuffle: function() {
       this.values = _.shuffle(this.values);
-    },
-  },
+    }
+  }
 };
 </script>
 

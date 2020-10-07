@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-// import playground from "../views/playground.vue";
 
 Vue.use(VueRouter);
 
@@ -18,7 +17,8 @@ const routes = [{
         path: "/gallery",
         component: () =>
           import('../views/Gallery.vue')
-      }
+      },
+
     ]
   },
 
