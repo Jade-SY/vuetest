@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
 
   components: {},
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 <style lang="scss">
@@ -28,5 +28,9 @@ p {
   font-size: 1.25rem;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.87);
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>

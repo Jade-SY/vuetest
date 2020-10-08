@@ -12,6 +12,8 @@
       <v-spacer></v-spacer>
       <router-link to="/gallery" class="menu">Gallery</router-link>
       <v-spacer></v-spacer>
+      <router-link to="/service" class="menu">Services</router-link>
+      <v-spacer></v-spacer>
       <v-btn class="login">login</v-btn>
     </v-app-bar>
   </div>
@@ -19,12 +21,12 @@
 
 <script>
 export default {
-  name: "AppBar",
+  name: 'AppBar',
   components: {},
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
