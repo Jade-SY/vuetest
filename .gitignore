@@ -2,7 +2,6 @@
 node_modules
 parallax-theme-v.1.0.0
 /dist
-/src/assets
 /src/config
 /tests/e2e/videos/
 /tests/e2e/screenshots/
